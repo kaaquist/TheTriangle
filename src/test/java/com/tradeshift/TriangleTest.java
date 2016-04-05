@@ -12,12 +12,12 @@ public class TriangleTest {
 
     @org.junit.Test
     public void testGetSideA() throws Exception {
+        System.out.print("NO!!!");
         Triangle triangle = new Triangle(1,1,1);
         assertEquals(triangle.getSideA(), 1L);
 
     }
 
-    @Ignore
     @org.junit.Test
     public void testGetSideB() throws Exception {
         Triangle triangle = new Triangle(1,1,1);
@@ -25,32 +25,29 @@ public class TriangleTest {
 
     }
 
-    @Ignore
+
     @org.junit.Test
     public void testGetSideC() throws Exception {
         Triangle triangle = new Triangle(1,1,1);
         assertEquals(triangle.getSideC(), 1L);
     }
 
-    @Ignore
     @org.junit.Test
     public void testIsEquilateral() throws Exception {
 
         Triangle triangle = new Triangle(1,1,1);
-        assertEquals(triangle.isEquilateral(), "Equilateral");
+        assertEquals(triangle.isEquilateral(), true);
     }
 
-    @Ignore
     @org.junit.Test
     public void testIsIsosceles() throws Exception {
         Triangle triangle = new Triangle(1,2,1);
-        assertEquals(triangle.toString(), "Isosceles");
+        assertEquals(triangle.isIsosceles(), true);
     }
 
-    @Ignore
     @org.junit.Test
     public void testIsScalene() throws Exception {
         Triangle triangle = new Triangle(1,2,3);
-        assertEquals(triangle.isScalene(), "Scalene");
+        assertEquals(triangle.isScalene(), true);
     }
 }

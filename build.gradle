@@ -1,3 +1,5 @@
+group '1.0'
+version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
 apply plugin: 'idea'
@@ -5,23 +7,19 @@ apply plugin: 'idea'
 repositories {
     mavenCentral()
 }
+
 dependencies {
-    testCompile 'junit:junit:[4,)'
-}
-test {
-
+    testCompile "junit:junit:4.11"
 }
 
-task hello {
-    doLast {
-        println 'Hello world!'
+test{
+    filter {
+        //specific test method
+        includeTestsMatching 'com.tradeshift.*'
     }
-
 }
 
-task ('run', type: JavaExec, group: 'run') {
-    description = 'Runs the application'
-    dependsOn tasks.build
-    main = com.tradeshift.Main
-    classpath sourceSets.main.runtimeClasspath
+task run(dependsOn: 'classes', type: JavaExec) {
+    main = 'com.tradeshift.Main'
+    classpath = sourceSets.main.runtimeClasspath
 }

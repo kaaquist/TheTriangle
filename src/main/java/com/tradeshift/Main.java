@@ -3,8 +3,8 @@ package com.tradeshift;
 public class Main {
 
     /**
-     * method that test to see which type of triangle a trangle is base on the three sides length
-     * return "Equilateral", "Isosceles" or "Scalene" based on the three sides.
+     * method that test to see which type of triangle a triangle is, base on the three sides length.
+     * Return "Equilateral", "Isosceles" or "Scalene" based on the three sides.
      * @param a int
      * @param b int
      * @param c int
